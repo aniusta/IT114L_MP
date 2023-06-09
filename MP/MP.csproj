@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin_Login.aspx" />
     <Content Include="Assets\Images\booking-topimage.jpg" />
     <Content Include="Assets\Images\Cashel-Palace-Hotel-Bishops--Buttery-Fireplace-Web.jpg" />
     <Content Include="Assets\Images\Cashel-Palace-Hotel-Classic-Afternoon-Tea-Web.jpg" />
@@ -172,6 +173,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Assets\Images\main-logo.png" />
+    <Content Include="Customer_Reservations.aspx" />
+    <Content Include="Report_Page.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -241,6 +244,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Login.aspx.cs">
+      <DependentUpon>Admin_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Login.aspx.designer.cs">
+      <DependentUpon>Admin_Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -275,6 +285,20 @@
     </Compile>
     <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Reservations.aspx.cs">
+      <DependentUpon>Customer_Reservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Reservations.aspx.designer.cs">
+      <DependentUpon>Customer_Reservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Page.aspx.cs">
+      <DependentUpon>Report_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Page.aspx.designer.cs">
+      <DependentUpon>Report_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>

@@ -16,7 +16,7 @@ namespace MP
 
             if (Session["LoggedIn"] != null && (bool)Session["LoggedIn"])
             {
-                string user = Session["user"].ToString();
+                string user = Session["firstname"].ToString();
                 login_button.Text = "Welcome, "+user;
             }
             else
@@ -28,6 +28,10 @@ namespace MP
         {
             Session["LoggedIn"] = false;
             Session["user"] = null;
+            Session["firstname"] = null;
+            Session["lastname"] = null;
+            Session["phonenumber"] = null;
+            Session["emailaddress"] = null;
             Response.Redirect(Request.RawUrl);
         }
         protected void signin_Click(object sender, EventArgs e)
@@ -51,8 +55,11 @@ namespace MP
                 signpassword_textbox.Text = "";
 
                 //save name to session
-                Session["user"] = database.GetFirstName(email);
-
+                Session["user"] = database.GetSigninDetails(email, "id");
+                Session["firstname"] = database.GetSigninDetails(email, "first_name");
+                Session["lastname"] = database.GetSigninDetails(email, "last_name");
+                Session["phonenumber"] = database.GetSigninDetails(email, "phone_number");
+                Session["emailaddress"] = database.GetSigninDetails(email, "email_address");
                 //reload page
                 Response.Redirect(Request.RawUrl);
 
@@ -65,6 +72,7 @@ namespace MP
                 signUpID.Style["margin-top"] = "0";
             }
         }
+
         protected void login_button_Click(object sender, EventArgs e)
         {
             if (login_button.Text == "SIGN IN")

@@ -16,14 +16,13 @@ namespace MP
 
         protected void login_button_Click(object sender, EventArgs e)
         {
-
             if (username_tb.Text == "admin" && password_tb.Text == "admin")
             {
                 Response.Redirect("Report_Page.aspx");
             }
-            else if (username_tb.Text == "" && password_tb.Text == "")
+            else if (username_tb.Text == "" || password_tb.Text == "")
             {
-                errmsg.InnerText = "";
+                errmsg.InnerText = "fill in the boxes";
             }
             else
             {

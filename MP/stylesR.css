@@ -170,8 +170,45 @@ footer {
     margin: 0;
     width: 100%;
 }
+.header-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
-.col-text{
+.rightmost-card .btn {
+    margin-top: 1rem;
+}
+
+.card-container {
+    background-color: white;
+    margin-top: 1rem;
+}
+    .card-container:last-child {
+        margin-bottom: 3cm;
+    }
+
+.card-container .container-padding {
+    padding: 1rem;
+}
+.card-container p {
+    text-align: left; 
+}
+
+.rightmost-card {
+    text-align: right;
+    display: block;
+}
+
+.rightmost-card strong {
+    font-size: 1.3rem;
+}
+.card-container .app_heading1 {
+    color: #875e2c;
+}
+.card-container {
+    display: flex;
+}
+.col-text {
     margin-left: 10rem;
     display: flex;
     justify-content: center;
@@ -183,6 +220,7 @@ footer {
     text-align: left;
     align-self: flex-start;
 }
+
 
 .col-img-right {
     padding: 5rem;
@@ -487,8 +525,12 @@ input {
     margin-bottom: 1rem;
 }
 
+.dropdown {
+    margin-top: .5rem;
+    width: 75%;
+}
 .reservation-cart-container {
-    height: 100vh;
+    height: inherit;
     position: relative;
 }
 
@@ -496,8 +538,13 @@ input {
     top: 1rem;
 }
 
+.reservation-cart .row {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
 .reservation-cart h2 {
     color: #875e2c;
+    font-weight: 600;
 }
 
 .search-button-container span {
@@ -577,7 +624,6 @@ fieldset {
 .app_page-background {
     background-color: #f2f2f2;
     width: 100%;
-    height: 100vh;
     z-index: 1;
     position: relative;
 }
@@ -767,6 +813,17 @@ a {
     background-color: grey;
     cursor: not-allowed;
 }
+.bold-underlined {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btn-booking {
+    position: absolute;
+    bottom: -20%;
+    height: 4em;
+    width: 92%;
+}
 
 .input-error-message {
     background: #ac0000;
@@ -775,7 +832,18 @@ a {
     padding: .5rem;
     display: none;
 }
+.booking-summary {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
+.booking-total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 .login_signUpMessage {
     border-top: 1px solid #999999;
     margin-top: 2rem;

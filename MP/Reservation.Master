@@ -43,7 +43,7 @@
 
             </div>
             <div class="navbar-right">
-                <a href="#" ><span>Find Reservations</span></a>
+                <asp:Button ID="viewrsrvtions" runat="server" class="btn" Text="View Reservations" PostBackUrl="~/Customer_Reservations.aspx"/>
                 <a href="#" ><span>+639123456789</span></a>
 
                 <div class="myaccount-container_container">
@@ -62,7 +62,7 @@
                                         <label for="signemail_textbox">Email</label>
                                     </div>
                                     <div class="form-floating col-signin">
-                                        <asp:TextBox ID="signpassword_textbox" class="form-control custom-height" runat="server" placeholder="Password"></asp:TextBox>
+                                        <asp:TextBox ID="signpassword_textbox" class="form-control custom-height" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
                                         <label for="signpassword_textbox">Password</label>
                                     </div>
                                 <asp:Button ID="signin_button" class="btn button_primary button-block" runat="server" Text="SIGN IN" OnClick="signin_Click" />
@@ -106,17 +106,20 @@
 
                 var modal = document.getElementById("<%= loginModal.ClientID %>");
                 var modalContent = modal.querySelector(".sign-in-modal-content");
+                var loggedInModal = document.getElementById("<%= loggedInModal.ClientID %>");
 
                 window.addEventListener("click", function (event) {
-                    if (event.target === modal || modalContent.contains(event.target)) {
+                    if (event.target === modal || modalContent.contains(event.target) || event.target === loggedInModal || loggedInModal.contains(event.target)) {
                         return;
                     }
                     hideLoginPopup();
                 });
+
                 function hideLoginPopup() {
-                    var modal = document.getElementById("<%= loginModal.ClientID %>");
                     modal.style.display = "none";
+                    loggedInModal.style.display = "none";
                 }
+
             </script>
 
         </nav>

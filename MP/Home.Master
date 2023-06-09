@@ -49,7 +49,7 @@
                         <li><a href="#" class="pseudo-text-effect main-footer-a" data-after="HOME"><span>HOME</span></a></li>
                         <li><a href="#" class="pseudo-text-effect main-footer-a" data-after="MEMBERS"><span>MEMBERS</span></a></li>
                         <li><a href="#" class="pseudo-text-effect main-footer-a" data-after="REFERENCES"><span>REFERENCES</span></a></li>
-                        <li><a href="#" class="pseudo-text-effect main-footer-a" data-after="CONTACT"><span>CONTACT</span></a></li>
+                        <li><a href="Admin_Login" class="pseudo-text-effect main-footer-a" data-after="ADMIN"><span>ADMIN</span></a></li>
                         <li><a href="#" class="pseudo-text-effect main-footer-a" data-after="DISCLAIMER"><span>DISCLAIMER</span></a></li>
                     </ul>
                 </div>

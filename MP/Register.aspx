@@ -94,11 +94,15 @@
                             <h2 class="app_heading1"><span>Acknowledgment</span></h2>
                         </div>
                         <div class="checkbox-container">
+                            <div class="privacy-container">
                             <asp:CheckBox ID="privacy_checkbox" runat="server" /><label for="privacy_checkbox"> * I agree with the Privacy Terms.</label>
+                            </div>
+                            <div id="acknowledgeContainer" runat="server">
                             <asp:CheckBox ID="acknowledgement_checkbox" runat="server" /><label for="acknowledgement_checkbox"> * I would like to create an account.</label>
                                     <div id="acknowledgeError" class="input-error-message" runat="server">
                                         Error: You need to agree to make an account.
                                     </div>
+                            </div>
                         </div>
                     </div>
                 <div class="button_group">
@@ -112,7 +116,9 @@
             <p><b>Looking for tailored solutions for your stay? </b><br>
             For any inquiries, You can contact us directly. We will then offer you the best solution for your stay.</p>
             </div>
-            
+<script>
+</script>
+
     </main>
 
 </asp:Content>

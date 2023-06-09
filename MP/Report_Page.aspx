@@ -37,11 +37,25 @@
         </div>
         <div class="col-md-12" style="text-align:center">
                 <asp:Button ID="booked_rooms_btn" class="btn button_primary" runat="server" Text="Booked Rooms" style="width:15%;height:30px" OnClick="booked_rooms_btn_Click"/>
-                <asp:Button ID="Button1" class="btn button_primary" runat="server" Text="Something" style="width:15%;height:30px" OnClick="something"/>
-                <asp:Button ID="Button2" class="btn button_primary" runat="server" Text="Admin Login" style="width:15%;height:30px" PostBackUrl="~/Admin_Login.aspx"/>
+                <asp:Button ID="Button1" class="btn button_primary" runat="server" Text="Customer Info" style="width:15%;height:30px" OnClick="customer_info_click"/>
+                <asp:Button ID="Button2" class="btn button_primary" runat="server" Text="Home" style="width:15%;height:30px" PostBackUrl="~/Default.aspx"/>
         </div>
         <div class="col-md-12" style="display:flex;justify-content:center">
-            <asp:GridView runat="server" ID="booked_rooms_tbl" EmptyDataText="NO INFO" class="typography-regular col-md-12" style="font-size:15px;border-collapse:collapse;width:1200px">
+            <asp:GridView runat="server" ID="booked_rooms_tbl" EmptyDataText="NO INFO" class="typography-regular col-md-12" 
+                style="font-size:15px;border-collapse:collapse;width:1200px" AllowPaging="true" PageSize="10" 
+                OnPageIndexChanging="booking_tbl_PageIndexChanged" BackColor="#fff7eb">
+                <HeaderStyle BackColor="White" />
+                <AlternatingRowStyle BackColor="White" />
+                <PagerStyle HorizontalAlign="Center" Font-Size="15px"/>
+            </asp:GridView>
+        </div>
+        <div class="col-md-6" style="display:flex;justify-content:center">
+            <asp:GridView runat="server" ID="total_tbl" EmptyDataText="NO INFO" class="typography-regular col-md-12" 
+                style="font-size:15px;border-collapse:collapse;width:300px" BackColor="#fff7eb"
+                AllowPaging="true" PageSize="10" OnPageIndexChanging="total_tbl_PageIndexChanging">
+                <HeaderStyle BackColor="White" />
+                <AlternatingRowStyle BackColor="White" />
+                <PagerStyle HorizontalAlign="Center" Font-Size="15px"/>
             </asp:GridView>
         </div>
         
