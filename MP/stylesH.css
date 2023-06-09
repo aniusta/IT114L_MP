@@ -1,0 +1,114 @@
+﻿.pseudo-text-effect {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    transition: transform .5s;
+    display: block;
+    text-decoration: none; /* Added to remove underline on the link */
+    color: black; /* Added to inherit the color from the parent */
+}
+
+.pseudo-text-effect::after {
+    content: attr(data-after);
+    display: inline-block;
+    transform: translateY(100%);
+    position: absolute;
+    left: 0;
+    transition: inherit;
+
+}
+
+.pseudo-text-effect > span {
+    display: inline-block;
+    transform: translateY(0%);
+    transition: inherit;
+}
+
+.pseudo-text-effect:hover > span {
+    transform: translateY(-100%);
+}
+
+.pseudo-text-effect:hover::after {
+    transform: translateY(0%);
+}
+
+/* Customizing */
+html {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .wrapper > * {
+        margin-right: 2rem;
+    }
+
+/* Prevent color change on hover */
+.pseudo-text-effect:hover > span,
+.pseudo-text-effect:hover::after {
+    color: black;
+}
+
+.hYbhyI {
+    position: relative;
+    color: rgb(19, 30, 41);
+    font-size: 13px;
+    overflow: hidden;
+    font-family: "Silka Regular";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    height: 15px;
+    user-select: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.myaccount-container_user {
+    position: relative;
+}
+
+.modal {
+    position: absolute;
+    top: 100%;
+    transform: translateX(-100%);
+    left: calc(100% + 20px);
+    display: none;
+    z-index: 1;
+    height: 500px;
+    width: 300px; /* Adjust the width as needed */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login_signUpMessage {
+    padding-top: 1rem;
+    border-top: 1px solid #999999;
+}
+
+.app_pageTitle {
+    font-feature-settings: 'dlig' 0, 'liga' 0, 'lnum' 1, 'kern' 1;
+    margin: 0;
+    color: rgba(73,57,75,1);
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Saol-Regular, Arial, sans-serif;
+    text-transform: none;
+    line-height: 1.3;
+}
