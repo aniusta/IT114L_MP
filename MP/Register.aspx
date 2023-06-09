@@ -31,7 +31,7 @@
                                 <div class="col-6">
                                    <div class="form-floating">
                                         <asp:TextBox ID="phone_textbox" class="form-control custom-height" runat="server" placeholder="Phone"></asp:TextBox>
-                                        <label for="firstname_textbox">Phone</label>
+                                        <label for="phone_textbox">Phone</label>
                                     </div>
                                 </div>
 

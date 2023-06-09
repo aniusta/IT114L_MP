@@ -28,6 +28,9 @@ body {
     line-height: 1.3;
 }
 
+.carousel {
+    width: 60%;
+}
 .grid-container {
     width: 100%;
     display: flex;
@@ -35,10 +38,26 @@ body {
     padding: 1rem;
 }
 
+.grid-container-center.fade-in {
+    opacity: 1;
+}
+
+.grid-container-center {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    width: 100%;
+    display: flex;
+    padding: 5rem;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
 .grid-left-half,
 .grid-right-half {
     opacity: 0;
-    transition: opacity 1s, transform 1s;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out, left 1s ease-in-out;
 }
 
 .grid-left-half.fade-in {
@@ -56,6 +75,11 @@ body {
     width: 800px;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    transition: filter .5s;
+}
+
+.grid-container .grid-right-half img:hover {
+    filter: brightness(70%);
 }
 
 .grid-container .grid-left-half {
@@ -83,6 +107,7 @@ body {
 .page-wrapper {
     width: 100%;
 }
+
 .footer-container .contactinfo .inner .left p {
     color: #1b1d21;
     font-size: 12px;
@@ -146,12 +171,60 @@ footer {
     width: 100%;
 }
 
+.col-text{
+    margin-left: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.col-text .typography-heading,
+.col-text .typography-regular {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.col-img-right {
+    padding: 5rem;
+}
+.col-img-right img {
+    width: 550px;
+    height: 750px;
+    margin-left: 5rem;
+    transition: filter .5s;
+}
+
+.col-img-right img:hover {
+    width: 550px;
+    height: 750px;
+    margin-left: 5rem;
+    filter: brightness(70%);
+}
+
 .required-field-indicator {
     display: flex;
     font-size: .85rem;
     align-items: flex-end;
 }
 
+.typography-regular {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    color: #131E29;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.typography-heading{
+    font-size: 48px;
+    line-height: 64px;
+    font-family: "Saol Regular";
+    font-weight: 400;
+    color: rgb(19, 30, 41);
+    text-align: center;
+}
 
 .legendContent h2 {
     margin: 0 0 1rem;
@@ -253,8 +326,9 @@ input {
 
 .home-top-container .hero-header-image .app_pageTitle {
     color: white;
-    letter-spacing: .3rem;
+    letter-spacing: .5rem;
     font-size: 5rem;
+    font-weight: 700;
     text-shadow: 3px 0px 7px rgba(81,67,21,0.5), -3px 0px 7px rgba(81,67,21,0.5), 0px 4px 7px rgba(81,67,21,0.5);
 }
 
@@ -274,6 +348,21 @@ input {
     letter-spacing: 4px;
     margin-top: 2.5rem;
     margin-bottom: 4rem;
+}
+.home-top-container .hero-header-image .app_pageTitle,
+.home-top-container .main-header-text p {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .home-top-container .main-header-text {
@@ -448,6 +537,19 @@ fieldset {
     min-width: inherit;
     width: 100%;
 }
+.show {
+    opacity: 1;
+}
+
+.page-wrapper .row {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+    .row.fade-in {
+        opacity: 1;
+    }
 
 .app_row {
     display: flex;
@@ -563,20 +665,24 @@ a {
     transform: translateX(-50%);
 }
 
-    .main-logo p {
-        position: absolute;
-        bottom: 0;
-        text-align: center;
-        right: 10%;
-    }
+.main-logo p {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    right: 10%;
+}
 
-    .main-logo .app_heading1 {
-        font-size: 1rem;
-    }
+.trans-nav .main-logo .app_heading1 {
+    color: rgba(255,255,255,0.9);
+}
 
-    .main-logo img {
-        width: 168px;
-    }
+.main-logo .app_heading1{
+    font-size: 1rem;
+}
+
+.main-logo img {
+    width: 168px;
+}
 
 .myaccount-container_user {
     position: relative;
