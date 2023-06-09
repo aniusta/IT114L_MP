@@ -60,42 +60,6 @@ namespace MP
         protected global::System.Web.UI.WebControls.Button signin_button;
 
         /// <summary>
-        /// errorMessage1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorMessage1;
-
-        /// <summary>
-        /// signUpID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signUpID;
-
-        /// <summary>
-        /// loggedInModal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl loggedInModal;
-
-        /// <summary>
-        /// logout_button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logout_button;
-
-        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>
