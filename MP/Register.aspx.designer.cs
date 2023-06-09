@@ -24,6 +24,15 @@ namespace MP
         protected global::System.Web.UI.WebControls.TextBox firstname_textbox;
 
         /// <summary>
+        /// firstError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl firstError;
+
+        /// <summary>
         /// lastname_textbox control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox lastname_textbox;
+
+        /// <summary>
+        /// lastError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lastError;
 
         /// <summary>
         /// phone_textbox control.
@@ -51,6 +69,15 @@ namespace MP
         protected global::System.Web.UI.WebControls.TextBox email_textbox;
 
         /// <summary>
+        /// emailError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailError;
+
+        /// <summary>
         /// emailconfirm_textbox control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox emailconfirm_textbox;
+
+        /// <summary>
+        /// emailConfirmError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailConfirmError;
 
         /// <summary>
         /// password control.
@@ -69,6 +105,15 @@ namespace MP
         protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
+        /// passwordError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl passwordError;
+
+        /// <summary>
         /// passwordconfirm control.
         /// </summary>
         /// <remarks>
@@ -76,6 +121,15 @@ namespace MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passwordconfirm;
+
+        /// <summary>
+        /// passwordConfirmError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl passwordConfirmError;
 
         /// <summary>
         /// privacy_checkbox control.
@@ -94,6 +148,15 @@ namespace MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox acknowledgement_checkbox;
+
+        /// <summary>
+        /// acknowledgeError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl acknowledgeError;
 
         /// <summary>
         /// cancel_button control.

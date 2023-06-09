@@ -66,9 +66,16 @@
                                         <label for="signpassword_textbox">Password</label>
                                     </div>
                                 <asp:Button ID="signin_button" class="btn button_primary button-block" runat="server" Text="SIGN IN" OnClick="signin_Click" />
+                                    <p><span id="errorMessage1" runat="server">You have entered an invalid username and/or password. Please try again</span></p>
                                 </fieldset>
-                                <p class="login_signUpMessage"><span>No account? Save time on your next booking.</span></p>
+                                <p id="signUpID" class="login_signUpMessage" runat="server"><span>No account? Save time on your next booking.</span></p>
                                 <a class="signup_link" href="/Register">Sign up here.</a>
+                            </div>
+                        </div>
+                        <div id="loggedInModal" runat="server" class="loggedInModal" style="display:none;">
+                            <div class="sign-in-modal-content">
+                                <a class="btn" href="/Register">Edit Profile</a>
+                                <asp:Button ID="logout_button" runat="server" class="btn" Text="Log Out" OnClick="logout_button_Clicked"/>
                             </div>
                         </div>
                     </div>
@@ -78,6 +85,25 @@
 
 
             <script>
+                $(document).ready(function () {
+                    // Disable the "SIGN IN" button initially
+                    $("#signin_button").prop("disabled", true);
+
+                    // Attach event handlers to email and password inputs
+                    $("#signemail_textbox, #signpassword_textbox").on("input", function () {
+                        // Check if both email and password have input
+                        var email = $("#signemail_textbox").val();
+                        var password = $("#signpassword_textbox").val();
+                        if (email.trim() !== "" && password.trim() !== "") {
+                            // Enable the "SIGN IN" button
+                            $("#signin_button").prop("disabled", false);
+                        } else {
+                            // Disable the "SIGN IN" button
+                            $("#signin_button").prop("disabled", true);
+                        }
+                    });
+                });
+
                 var modal = document.getElementById("<%= loginModal.ClientID %>");
                 var modalContent = modal.querySelector(".sign-in-modal-content");
 

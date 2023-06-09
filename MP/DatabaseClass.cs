@@ -50,24 +50,17 @@ namespace MP
                 command.Parameters.AddWithValue("@Email", email);
 
                 connection.Open();
-                firstName = command.ExecuteScalar().ToString();
-                connection.Close();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    firstName = reader.GetString(0);
+                }
+
+                reader.Close();
             }
 
             return firstName;
-        }
-        public DataTable tables_fill(string cmnd)
-        {
-
-            using (MySqlConnection connection = new MySqlConnection(connectionstring))
-            {
-                dbadapter = new MySqlDataAdapter(cmnd, connection);
-                datatable = new DataTable();
-                dbadapter.Fill(datatable);
-                connection.Close();
-            }
-
-            return datatable;
         }
 
         public void InsertRegistrationInfo(string firstName, string lastName, string phone, string email, string password)
@@ -87,9 +80,7 @@ namespace MP
                 cmd.Parameters.AddWithValue("@password", password);
 
                 cmd.ExecuteNonQuery();
-                connection.Close();
             }
-            
         }
     }
 }

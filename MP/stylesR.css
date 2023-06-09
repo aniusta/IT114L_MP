@@ -704,6 +704,21 @@ a {
     box-shadow: 0 4px 9px 3px rgba(0, 0, 0, 0.3);
 }
 
+.loggedInModal {
+    position: absolute;
+    top: 100%;
+    transform: translateX(-100%);
+    left: calc(100% - 10px);
+    display: none;
+    z-index: 2;
+    height: 120px;
+    width: 155px; /* Adjust the width as needed */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #999999;
+    box-shadow: 0 4px 9px 3px rgba(0, 0, 0, 0.3);
+}
+
 .hero-image-description {
     position: absolute;
     bottom: 0;
@@ -748,13 +763,28 @@ a {
     padding: 0;
     margin-top: 0;
 }
-
-.login_signUpMessage {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #999999;
+.btn[disabled] {
+    background-color: grey;
+    cursor: not-allowed;
 }
 
+.input-error-message {
+    background: #ac0000;
+    color: #FFF;
+    width: 385px;
+    padding: .5rem;
+    display: none;
+}
+
+.login_signUpMessage {
+    border-top: 1px solid #999999;
+    margin-top: 2rem;
+}
+
+#errorMessage1 {
+    color: red;
+    display: none;
+}
 .app_pageTitle {
     font-feature-settings: 'dlig' 0, 'liga' 0, 'lnum' 1, 'kern' 1;
     margin: 0;
